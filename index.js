@@ -53,10 +53,10 @@ if(process.env.NODE_ENV==='production'){
     app.use(express.static('client/build'))
 
     // if browser is not asking for anyfile but a route then come here
-    // if it is not a file then it will serve the react(client side) ex- /surveys
+    // if it is not a file then it will serve the react(client side) ex- 
     const path = require('path')
     app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','indes.html'))
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
 }
 
