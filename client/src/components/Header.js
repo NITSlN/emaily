@@ -33,14 +33,13 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
-      <nav>
+      <nav className="navbar purple" style={{marginBottom:'30px',borderRadius:"0 0 10px 10px"}} >
         <div class="nav-wrapper">
-          <Link to={this.props.auth? '/surveys':'/'} style={{ padding: '0px 15px' }} class="brand-logo">
+          <Link to={this.props.auth? '/surveys':'/'} style={{ padding: '0px 15px' }} className="left brand-logo">
             Emaily
           </Link>
-          <ul class="right right hide-on-med-and-down ">
+          <ul className="right">
             {
               this.renderLogin()
             }

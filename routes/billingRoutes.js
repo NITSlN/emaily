@@ -8,7 +8,7 @@ module.exports = (app) => {
     try {
         await stripe.charges.create({
             amount: 500,
-            currency: 'usd',
+            currency: 'inr',
             description: '5$ for 5 credits',
             source: req.body.id, // token is in the body of req object
           })

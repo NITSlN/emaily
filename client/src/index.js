@@ -7,6 +7,11 @@ import thunk from 'redux-thunk'
 
 import App from './components/App'
 import reducers from './reducers'
+import './index.css'
+// for development test only
+import axios from 'axios'
+window.axios= axios
+
 const store = createStore(reducers, {}, applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
@@ -15,4 +20,4 @@ ReactDOM.render(
 
   document.getElementById('root'),
 )
-console.log('Stripe key',process.env.REACT_APP_STRIPE_KEY); // we can't show the backend key to front end therefore we defined environment variable for stripe key
+ // we can't show the backend key to front end therefore we defined environment variable for stripe key

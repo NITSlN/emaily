@@ -2,10 +2,10 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cookieSession = require('cookie-session') // we need this to tell express to use cookies
 const passport = require('passport'); 
-const bodyParser = require('body-parser')
 const keys = require('./config/keys')
 
 require('./models/User')
+require('./models/Survey')
 require('./services/passport') // we need the whole code
 const app = express()
 
@@ -42,6 +42,7 @@ mongoose.connect(keys.mongoURI,{
 
 require('./routes/authRoutes')(app)
 require('./routes/billingRoutes')(app)
+require('./routes/surveyRoutes')(app)
 
 // configuring for production
 // React has different routes and express has different routes ex - /api/stripe and /surveys

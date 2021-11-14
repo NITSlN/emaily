@@ -24,6 +24,7 @@ module.exports = (app) => {
   app.get('/api/user',(req,res)=>{
     res.send(req.user) // paaport adds the user to the req object as req.user
   })
+ 
 }
 
 // flow whenever req comes in when user is logged in ( have cookie)
