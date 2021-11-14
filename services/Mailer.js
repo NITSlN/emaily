@@ -10,7 +10,7 @@ class Mailer extends helper.Mail{
 
         this.sgApi = sendgrid(keys.sendGridKey) // with this we can communicate to the sendGrid api
         // this are specific to sendgrid
-        this.from_email=new helper.Email('nitishgoku01@gmail.com')
+        this.from_email=new helper.Email('dontreplytothisemail7@gmail.com')
         this.subject= subject
         this.body = new helper.Content('text/html',content)
         this.recipients=this.formatAddresses(recipients)
